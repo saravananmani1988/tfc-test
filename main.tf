@@ -18,7 +18,7 @@ provider "intersight" {
 module "terraform-intersight-iks" {
 
   source  = "terraform-cisco-modules/iks/intersight//"
-  version = "2.1.0"
+  version = "2.1.2"
 
 # Kubernetes Cluster Profile  Adjust the values as needed.
   cluster = {
