@@ -116,6 +116,8 @@ module "terraform-intersight-iks" {
   addons       = {
     createNew = false
     use_existing = false
+    
+  }
 
 # Worker Node Instance Type (To create new change "use_existing" to 'false' and uncomment variables and modify them to meet your needs.)
   instance_type = {
