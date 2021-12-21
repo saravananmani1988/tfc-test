@@ -15,14 +15,14 @@ provider "intersight" {
   endpoint  = var.endpoint
 }
   
-# data "intersight_organization_organization" "organization_moid" {
-# name = "default"
-# }
+data "intersight_organization_organization" "organization_moid" {
+name = "default"
+}
 
-# output "PodX_organization_moid" {
-# description = "organization id "
-# value = data.intersight_organization_organization.organization_moid.id
-# }
+output "PodX_organization_moid" {
+description = "organization id "
+value = data.intersight_organization_organization.organization_moid.id
+}
 
 #   resource "intersight_ntp_policy" "ntp1" {
 #   name        = "ntp1-tfc"
