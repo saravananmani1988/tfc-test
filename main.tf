@@ -7,6 +7,7 @@ terraform {
       version = ">=1.0.18"
     }
   }
+}
 
 provider "intersight" {
   apikey    = var.apikey
