@@ -116,27 +116,7 @@ module "terraform-intersight-iks" {
   addons       = {
     createNew = false
     use_existing = false
-    # {
-    # addonPolicyName = "smm-tf"
-    # addonName            = "smm"
-    # description       = "SMM Policy"
-    # upgradeStrategy  = "AlwaysReinstall"
-    # installStrategy  = "InstallOnly"
-    # releaseVersion = "1.7.4-cisco4-helm3"
-    # overrides = yamlencode({"demoApplication":{"enabled":true}})
-    # }
-    
-    createNew = false
-    use_existing = false
-    # {
-    # addonName            = "ccp-monitor"
-    # description       = "monitor Policy"
-    # upgradeStrategy  = "AlwaysReinstall"
-    # installStrategy  = "InstallOnly"
-    # releaseVersion = "0.2.61-helm3"
-    # overrides = yamlencode({"demoApplication":{"enabled":true}})
-    # }
-    }
+
 # Worker Node Instance Type (To create new change "use_existing" to 'false' and uncomment variables and modify them to meet your needs.)
   instance_type = {
     use_existing = true
@@ -148,5 +128,4 @@ module "terraform-intersight-iks" {
 
 # Organization and Tag Information
   organization = "default"
-  tags         = "IST"
 }
