@@ -23,7 +23,7 @@ module "terraform-intersight-iks" {
 # Kubernetes Cluster Profile  Adjust the values as needed.
   cluster = {
     name                = "new_cluster_ist"
-    action              = "Unassign"
+    action              = "Deploy"
     wait_for_completion = false
     worker_nodes        = 1
     load_balancers      = 1
@@ -36,13 +36,13 @@ module "terraform-intersight-iks" {
 
 # IP Pool Information (To create new change "use_existing" to 'false' uncomment variables and modify them to meet your needs.)
   ip_pool = {
-    use_existing        = false
+    use_existing        = true
     name                = "New-IP-Pool-IST"
-     ip_starting_address = "10.0.208.165"
-     ip_pool_size        = "05"
-     ip_netmask          = "255.255.255.0"
-     ip_gateway          = "10.0.208.1"
-     dns_servers         = ["10.0.208.135"]
+#      ip_starting_address = "10.0.208.165"
+#      ip_pool_size        = "05"
+#      ip_netmask          = "255.255.255.0"
+#      ip_gateway          = "10.0.208.1"
+#      dns_servers         = ["10.0.208.135"]
   }
 
 # Sysconfig Policy (UI Reference NODE OS Configuration) (To create new change "use_existing" to 'false' uncomment variables and modify them to meet your needs.)
