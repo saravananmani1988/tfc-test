@@ -36,13 +36,13 @@ module "terraform-intersight-iks" {
 
 # IP Pool Information (To create new change "use_existing" to 'false' uncomment variables and modify them to meet your needs.)
   ip_pool = {
-    use_existing        = true
-    name                = "New-IP-Pool-IST"
-#      ip_starting_address = "10.0.208.165"
-#      ip_pool_size        = "05"
-#      ip_netmask          = "255.255.255.0"
-#      ip_gateway          = "10.0.208.1"
-#      dns_servers         = ["10.0.208.135"]
+    use_existing        = false
+    name                = "New-IP-Pool-from-IST"
+     ip_starting_address = "10.0.208.192"
+     ip_pool_size        = "05"
+     ip_netmask          = "255.255.255.0"
+     ip_gateway          = "10.0.208.1"
+     dns_servers         = ["10.0.208.135","8.8.8.8"]
   }
 
 # Sysconfig Policy (UI Reference NODE OS Configuration) (To create new change "use_existing" to 'false' uncomment variables and modify them to meet your needs.)
